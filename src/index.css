@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #fafaf9;
+    color: theme('colors.black');
+    @apply antialiased selection:bg-primary selection:text-white;
+  }
+  
+  a, button, input, select, textarea {
+    @apply transition-all duration-300;
+  }
+}
+
+*{
+    font-family: Outfit;
+}
+
+select,input,textarea{
+    border: 1px solid theme('colors.gray.300');
+    outline-color: theme('colors.black');
+    border-radius: 6px;
+    padding: 0.5rem;
+    background-color: theme('colors.white');
+}
+
+.active{
+    background-color: theme('colors.gray.100');
+    border-color: theme('colors.black');
+    color: theme('colors.black');
+    font-weight: 500;
+}
